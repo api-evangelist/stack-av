@@ -1,0 +1,57 @@
+# Stack AV
+
+> Stack AV is a Pittsburgh, Pennsylvania autonomous-vehicle company founded in 2023 by Bryan Salesky
+> (CEO), Peter Rander (President) and Brett Browning (CTO) — the leadership team behind Argo AI — and
+> backed by SoftBank Group. It develops AI-driven autonomy for Class 8 commercial freight trucks and
+> unveiled its first truck, built with PACCAR and Peterbilt Motors, in May 2026.
+
+<!--
+generated: 2026-08-29
+method: generated
+source: apis.yml + artifacts in this repository (github.com/api-evangelist/stack-av). Stack AV does
+  not publish an llms.txt of its own; https://stackav.com/llms.txt returned HTTP 404 on 2026-08-29.
+  This file is an API Evangelist third-party profile, not a Stack AV publication.
+-->
+
+## No API
+
+Stack AV publishes no public API, no developer portal, no API reference, and no machine-readable
+API contract. Its product is an autonomous freight service delivered on trucks, not a developer
+platform. Probed 2026-08-29, all HTTP 404 on stackav.com: /openapi.json, /swagger.json, /api-docs,
+/docs, /graphql, /api, /developers, /llms.txt, and every /.well-known/ path including
+/.well-known/agent-card.json and /.well-known/api-catalog. api.stackav.com, developer.stackav.com,
+docs.stackav.com, status.stackav.com and trust.stackav.com do not resolve in DNS.
+
+## Company
+
+- [Stack AV](https://stackav.com/): Company homepage.
+- [About](https://stackav.com/about): Mission, founders, and values.
+- [Safety](https://stackav.com/safety): The company's safety approach for autonomous trucking.
+- [Careers](https://stackav.com/join): Open roles.
+- [LinkedIn](https://www.linkedin.com/company/stackav/): Company updates; Stack AV runs no blog on its own domain.
+
+## Open source
+
+Stack AV maintains a public engineering organization at
+[github.com/stackav-oss](https://github.com/stackav-oss). These are libraries, not API clients —
+Stack AV has no API for them to wrap.
+
+- [dltype](https://github.com/stackav-oss/dltype): Runtime shape/dtype typing for torch, jax and numpy arrays. PyPI `dltype` 0.17.0 (2026-08-26), Apache-2.0.
+- [conch](https://github.com/stackav-oss/conch): A "standard library" of Triton GPU kernels. PyPI `conch-triton-kernels` 1.3 (2025-09-05), Apache-2.0.
+- [clockwork](https://github.com/stackav-oss/clockwork): C++/Bazel module. Source-only, Apache-2.0.
+- [scene-tokens](https://github.com/stackav-oss/scene-tokens): ML framework for characterizing driving scenarios from trajectory datasets. Source-only.
+- [ai-workloads](https://github.com/stackav-oss/ai-workloads): AI/ML infrastructure workloads. Source-only.
+- [push-guard](https://github.com/stackav-oss/push-guard): Go CLI tool. Untagged Go module, Apache-2.0.
+
+## Legal
+
+- [Terms of Use](https://stackav.com/terms)
+- [Privacy Policy](https://stackav.com/privacy)
+- [Cookies](https://stackav.com/cookies)
+
+## Optional
+
+- [API Evangelist profile](https://apis.io/provider/stack-av): Independent third-party profile and rating.
+- [Packages](packages/stack-av-packages.yml): First-party open-source packages with registry versions and dates.
+- [Well-known probe](well-known/stack-av-well-known.yml): Recorded absence of every /.well-known/ document.
+- [Domain security](security/stack-av-domain-security.yml): TLS/DNSSEC/SPF/DMARC probe results.

@@ -1,0 +1,92 @@
+generated: '2026-08-29'
+method: probed
+source: live GET probes of /.well-known/* on every host in apis.yml
+note: >-
+  Nothing served. Every /.well-known/ path on both stackav.com and www.stackav.com returned HTTP 404
+  from the Next.js marketing site, so no WellKnown or SecurityTxt pointer is emitted in apis.yml —
+  this file records a verified absence, not a surface. Stack AV operates no API host: api.stackav.com,
+  developer.stackav.com, developers.stackav.com, docs.stackav.com, status.stackav.com and
+  trust.stackav.com all fail to resolve (curl exit code 6, recorded below as status 0).
+hosts:
+- host: stackav.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.stackav.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+unresolved_hosts:
+- host: api.stackav.com
+  status: 0
+  note: DNS does not resolve
+- host: developer.stackav.com
+  status: 0
+  note: DNS does not resolve
+- host: developers.stackav.com
+  status: 0
+  note: DNS does not resolve
+- host: docs.stackav.com
+  status: 0
+  note: DNS does not resolve
+- host: status.stackav.com
+  status: 0
+  note: DNS does not resolve
+- host: trust.stackav.com
+  status: 0
+  note: DNS does not resolve
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run in full against the only reachable host. No OpenAPI, Swagger,
+    GraphQL, MCP or A2A surface exists.
+  probes:
+  - url: https://stackav.com/openapi.json
+    status: 404
+  - url: https://stackav.com/swagger.json
+    status: 404
+  - url: https://stackav.com/api-docs
+    status: 404
+  - url: https://stackav.com/docs
+    status: 404
+  - url: https://stackav.com/graphql
+    status: 404
+  - url: https://stackav.com/api
+    status: 404
+  - url: https://stackav.com/developers
+    status: 404
+  - url: https://stackav.com/llms.txt
+    status: 404
+  - url: https://stackav.com/sitemap.xml
+    status: 404

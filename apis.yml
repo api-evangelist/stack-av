@@ -1,17 +1,35 @@
 aid: stack-av
 name: Stack AV
-description: 'Stack AV is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Stack AV is a Pittsburgh, Pennsylvania autonomous-vehicle company founded in 2023 by Bryan Salesky
+  (CEO), Peter Rander (President) and Brett Browning (CTO) — the leadership team behind Argo AI — and
+  backed by SoftBank Group. The company develops AI-driven autonomy software and hardware for Class 8
+  commercial freight trucking, targeting driver shortages, vehicle uptime, safety, operating cost and
+  emissions, and in May 2026 unveiled its first autonomous truck built in collaboration with PACCAR
+  and Peterbilt Motors. Stack AV runs a public open-source engineering organization at
+  github.com/stackav-oss (dltype, conch Triton kernels, clockwork, scene-tokens, push-guard, ai-workloads).
+  It publishes no public developer program, API reference, or machine-readable API contract as of
+  August 2026 — the product is an autonomous freight service, not a developer platform.
+image: https://stackav.com/Stack_Primary_Stacked_Blue_RGB_.jpg
 url: https://raw.githubusercontent.com/api-evangelist/stack-av/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-08-29'
 modified: '2026-08-29'
 tags:
 - Company
+- Autonomous Vehicles
+- Transportation
+- Trucking
+- Freight
+- Logistics
+- Artificial Intelligence
+- Robotics
+- Machine Learning
+- Open Source
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,47 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/stack-av_stock/
+  url: https://stackav.com/
+- type: About
+  url: https://stackav.com/about
+- type: GitHubOrganization
+  url: https://github.com/stackav-oss
+- type: TermsOfService
+  url: https://stackav.com/terms
+- type: PrivacyPolicy
+  url: https://stackav.com/privacy
+- type: Careers
+  url: https://stackav.com/join
+- type: LinkedIn
+  url: https://www.linkedin.com/company/stackav/
+- type: Packages
+  url: packages/stack-av-packages.yml
+- type: LLMsTxt
+  url: llms/stack-av-llms.txt
+- type: DomainSecurity
+  url: security/stack-av-domain-security.yml
+x-enrichment:
+  date: '2026-08-29'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Stack AV sells an autonomous freight service, not software — its stackav.com Next.js site is six
+    marketing pages (home, about, safety, join, terms, privacy) with no developer section, and while
+    the company does run a real open-source org at github.com/stackav-oss shipping ML libraries
+    (dltype, conch-triton-kernels), none of them is an API client and no API host exists to call.
+  evidence:
+  - url: https://stackav.com/developers
+    status: 404
+  - url: https://stackav.com/openapi.json
+    status: 404
+  - url: https://stackav.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.stackav.com/
+    status: 0
+  - url: https://github.com/stackav-oss
+    status: 200
+  checked: '2026-08-29'

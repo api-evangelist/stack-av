@@ -1,0 +1,95 @@
+generated: '2026-08-29'
+method: searched
+source: >-
+  https://github.com/stackav-oss (the Stack AV open-source org, whose GitHub profile links
+  https://stackav.com/), plus the PyPI and Go module-proxy metadata endpoints for each package.
+note: >-
+  Stack AV publishes no public API, so none of these are API client SDKs. They are first-party
+  open-source engineering libraries released by the company's Stack AV Co. copyright holder under
+  the stackav-oss GitHub organization, verified first-party by the org's linked website
+  (stackav.com), Stack AV Co. copyright headers, and @stackav.com author e-mail addresses in the
+  package metadata. official:true here means "published by Stack AV", not "a client for a Stack AV API".
+official_sdk_count: 0
+package_count: 6
+packages:
+- name: dltype
+  registry: pypi
+  official: true
+  url: https://pypi.org/project/dltype/
+  repository: https://github.com/stackav-oss/dltype
+  license: Apache-2.0
+  version: 0.17.0
+  published: '2026-08-26'
+  release_count: 22
+  description: >-
+    Lightweight runtime shape/dtype typing library for torch tensors, jax arrays and numpy arrays.
+  evidence: https://pypi.org/pypi/dltype/json
+- name: conch-triton-kernels
+  registry: pypi
+  official: true
+  url: https://pypi.org/project/conch-triton-kernels/
+  repository: https://github.com/stackav-oss/conch
+  license: Apache-2.0
+  version: '1.3'
+  published: '2025-09-05'
+  release_count: 7
+  description: A "standard library" of Triton GPU kernels.
+  evidence: https://pypi.org/pypi/conch-triton-kernels/json
+  note: >-
+    First-party confirmed from pyproject.toml — "Copyright 2025 Stack AV Co." and authors
+    jmanning+oss@stackav.com / rhsu+oss@stackav.com. Do not confuse with the unrelated PyPI
+    package "Conch" (Twisted SSHv2), which is a different project.
+- name: github.com/stackav-oss/push-guard
+  registry: go
+  official: true
+  url: https://pkg.go.dev/github.com/stackav-oss/push-guard
+  repository: https://github.com/stackav-oss/push-guard
+  license: Apache-2.0
+  version: v0.0.0-20251016174705-14cc9ab4a940
+  published: '2025-10-16'
+  description: Go command-line tool; untagged, so the module proxy serves only a pseudo-version.
+  evidence: https://proxy.golang.org/github.com/stackav-oss/push-guard/@latest
+  note: >-
+    No semantic-version tag has ever been published; the module proxy resolves the default branch
+    to a commit pseudo-version. A consumer cannot pin a released version.
+- name: clockwork
+  registry: none
+  official: true
+  url: https://github.com/stackav-oss/clockwork
+  repository: https://github.com/stackav-oss/clockwork
+  license: Apache-2.0
+  version: null
+  published: null
+  description: C++/Bazel monorepo module ("module(name = \"clockwork\")" in MODULE.bazel).
+  evidence: https://registry.bazel.build/modules/clockwork
+  note: >-
+    Checked, nothing to record — not registered in the Bazel Central Registry (404 on
+    registry.bazel.build/modules/clockwork) and published to no package registry. Source-only
+    distribution via git.
+- name: scene-tokens
+  registry: none
+  official: true
+  url: https://github.com/stackav-oss/scene-tokens
+  repository: https://github.com/stackav-oss/scene-tokens
+  license: null
+  version: null
+  published: null
+  description: >-
+    ML framework for discovering and characterizing driving scenarios from trajectory datasets.
+  evidence: https://pypi.org/pypi/scene-tokens/json
+  note: >-
+    Checked, nothing to record — pyproject.toml declares name "scene-tokens" version 0.1.0 but PyPI
+    returns 404; source-only distribution via git. No LICENSE file in the repository root.
+- name: ai-workloads
+  registry: none
+  official: true
+  url: https://github.com/stackav-oss/ai-workloads
+  repository: https://github.com/stackav-oss/ai-workloads
+  license: null
+  version: null
+  published: null
+  description: AI/ML infrastructure workloads (clip, cosmos, lidar_vae, mega-sam, whisper) as git submodules.
+  evidence: https://api.github.com/repos/stackav-oss/ai-workloads
+  note: >-
+    Checked, nothing to record — a submodule aggregation repository with no packaging manifest and
+    no registry entry. No LICENSE file in the repository root.
