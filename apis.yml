@@ -10,6 +10,18 @@ description: >-
   github.com/stackav-oss (dltype, conch Triton kernels, clockwork, scene-tokens, push-guard, ai-workloads).
   It publishes no public developer program, API reference, or machine-readable API contract as of
   August 2026 — the product is an autonomous freight service, not a developer platform.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://stackav.com/Stack_Primary_Stacked_Blue_RGB_.jpg
 url: https://raw.githubusercontent.com/api-evangelist/stack-av/refs/heads/main/apis.yml
 x-type: company
